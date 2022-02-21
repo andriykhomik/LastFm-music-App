@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #181717;
+  font-family: 'Roboto', sans-serif;
+  cursor: default;
+  overflow: hidden;
+  padding: 0;
+}
+
+.genre-list-container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genre-list{
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  justify-content: center;
+  align-items: center;
+
+  & .genre{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  & .genre img{
+    border-radius: 10px;
+    width: 380px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+}
