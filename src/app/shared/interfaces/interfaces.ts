@@ -8,7 +8,7 @@ export interface Albums {
 
 export interface Album {
   artist: Artist;
-  // image: (4) [{…}, {…}, {…}, {…}]
+  image: Image[];
   mbid: string;
   name: string;
   url: string;
@@ -18,4 +18,13 @@ export interface Artist {
   name: string;
   mbid: string;
   url: string;
+}
+
+export interface Image {
+  size: string;
+  ['#text']: string;
+}
+
+export interface Favorite {
+  [key: string]: any;
 }

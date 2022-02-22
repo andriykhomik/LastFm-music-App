@@ -1,1 +1,5 @@
-<p>albums works!</p>
+<app-header></app-header>
+
+<ng-container *ngIf="albums$ | async as albums">
+  <app-albums-list class="album-list" [albums]="albums"></app-albums-list>
+</ng-container>

@@ -16,13 +16,7 @@ export class GenresComponent implements OnInit {
     'R&B',
     'indie',
   ];
-  constructor(private albumsService: AlbumsService) {
-    console.log('dsdscscsdssdsd');
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-    this.albumsService.getTopAlbums('R&B').subscribe((response: Album[]) => {
-      console.log(response);
-    });
-  }
+  ngOnInit(): void {}
 }

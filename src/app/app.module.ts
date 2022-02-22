@@ -5,11 +5,16 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app.routing.module';
-import { RockComponent } from './genres/components/rock/rock.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations: [AppComponent, RockComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+  ],
   providers: [
     { provide: 'BASE_URL', useFactory: () => environment.apiUrl },
     { provide: 'ATOKEN', useFactory: () => environment.apiToken },
