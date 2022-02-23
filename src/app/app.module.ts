@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app.routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     AppRoutingModule,
     FontAwesomeModule,
+    NgHttpLoaderModule.forRoot(),
   ],
   providers: [
     { provide: 'BASE_URL', useFactory: () => environment.apiUrl },
