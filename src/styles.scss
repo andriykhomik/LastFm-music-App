@@ -133,8 +133,8 @@ a {
     position: relative;
 
     &-info {
-      color: var(--light-color);
-      background-color: #30308c;
+      color: #f1efec;
+      background-color: #2424a4;
       height: 18px;
       width: 18px;
       border-radius: 50%;
@@ -144,7 +144,7 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     & fa-icon {

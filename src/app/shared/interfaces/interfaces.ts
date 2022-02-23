@@ -25,6 +25,6 @@ export interface Image {
   ['#text']: string;
 }
 
-export interface Favorite {
+export interface LSObject {
   [key: string]: any;
 }

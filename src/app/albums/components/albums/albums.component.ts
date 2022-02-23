@@ -10,8 +10,9 @@ import { Album } from '../../../shared/interfaces/interfaces';
   styleUrls: ['./albums.component.css'],
 })
 export class AlbumsComponent implements OnInit {
-  public genre!: string;
+  private genre!: string;
   public albums$!: Observable<Album[]>;
+
   constructor(
     private albumsService: AlbumsService,
     private activatedRoute: ActivatedRoute

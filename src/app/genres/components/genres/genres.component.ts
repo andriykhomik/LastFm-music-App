@@ -1,13 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { AlbumsService } from '../../../shared/services/albums.service';
-import { Album } from '../../../shared/interfaces/interfaces';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-genres',
   templateUrl: './genres.component.html',
   styleUrls: ['./genres.component.scss'],
 })
-export class GenresComponent implements OnInit {
+export class GenresComponent {
   public genres: string[] = [
     'rock',
     'electro',
@@ -16,7 +14,4 @@ export class GenresComponent implements OnInit {
     'R&B',
     'indie',
   ];
-  constructor() {}
-
-  ngOnInit(): void {}
 }
