@@ -1,0 +1,17 @@
+<div class="album-list-item" (click)="addRemoveFavorite()">
+  <div class="album-list-info">
+    <img [src]="image" [alt]="album.name" />
+  </div>
+
+  <div class="album-list-overview">
+    <div>
+      <strong>{{ album.name }}</strong>
+    </div>
+    <div>
+      <small>{{ album.artist.name }}</small>
+    </div>
+    <div [ngStyle]="{ color: isLiked ? 'red' : 'gray' }">
+      <fa-icon [icon]="faHeart"></fa-icon>
+    </div>
+  </div>
+</div>
