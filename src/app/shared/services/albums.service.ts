@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, map, Observable } from 'rxjs';
-import { Album, AlbumsRes } from '../interfaces/interfaces';
+import { Album, AlbumsRes } from '../interfaces';
 
 @Injectable({
   providedIn: 'root',

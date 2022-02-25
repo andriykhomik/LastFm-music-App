@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { StateService } from '../../services/state.service';
+import { StateService } from '../../../services/state.service';
 
 @Component({
   selector: 'app-header-features',

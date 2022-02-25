@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { RouterModule, Routes } from '@angular/router';
-import { GenresComponent } from '../genres/components/genres/genres.component';
 import { AlbumsListComponent } from './components/albums-list/albums-list.component';
 import { AlbumsItemComponent } from './components/albums-item/albums-item.component';
 import { SharedModule } from '../shared/shared.module';

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { AlbumsService } from '../../services/albums.service';
+import { AlbumsService } from '../../../services/albums.service';
 
 @Component({
   selector: 'app-search',

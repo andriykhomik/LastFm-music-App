@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { LSObject } from '../interfaces/interfaces';
+import { LSObject } from '../interfaces';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StateService {
   private likesCount: number = +JSON.parse(
-    localStorage.getItem('liked') || '{}'
+    localStorage.getItem('liked') || '0'
   );
   public state: LSObject = JSON.parse(
-    localStorage.getItem('favoriteList') || '{}'
+    localStorage.getItem('favoriteList') || '0'
   );
   public albumsRate$: BehaviorSubject<number> = new BehaviorSubject<number>(
     this.likesCount
@@ -54,8 +54,10 @@ export class StateService {
   }
 
   public favoritesCounter(isLiked: boolean | null): void {
-    if (!this.likesCount && this.likesCount !== 0) {
+    if (isLiked && this.likesCount === 0) {
+      this.likesCount++;
       localStorage.setItem('liked', JSON.stringify(0));
+    } else if (this.likesCount === 0) {
     } else {
       if (isLiked === null) {
         return;

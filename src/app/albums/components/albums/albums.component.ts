@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlbumsService } from '../../../shared/services/albums.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Album } from '../../../shared/interfaces/interfaces';
+import { Album } from '../../../shared/interfaces';
 
 @Component({
   selector: 'app-albums',

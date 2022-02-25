@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Album } from '../../../shared/interfaces/interfaces';
+import { Album } from '../../../shared/interfaces';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { StateService } from '../../../shared/services/state.service';
 import { ActivatedRoute, Params } from '@angular/router';
