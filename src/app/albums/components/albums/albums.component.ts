@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlbumsService } from '../../../shared/services/albums.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Album } from '../../../shared/interfaces';
+import { Album, GotAlbum } from '../../../shared/interfaces';
 
 @Component({
   selector: 'app-albums',
@@ -11,7 +11,7 @@ import { Album } from '../../../shared/interfaces';
 })
 export class AlbumsComponent implements OnInit {
   private genre!: string;
-  public albums$!: Observable<Album[]>;
+  public albums$!: Observable<GotAlbum[]>;
 
   constructor(
     private albumsService: AlbumsService,
@@ -22,7 +22,7 @@ export class AlbumsComponent implements OnInit {
     this.getAlbums();
   }
 
-  private getAlbums() {
+  private getAlbums(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
       this.genre = params['genre'];
     });

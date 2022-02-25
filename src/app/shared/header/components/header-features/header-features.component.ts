@@ -14,8 +14,8 @@ export class HeaderFeaturesComponent implements OnInit {
   constructor(private stateService: StateService) {}
 
   ngOnInit(): void {
-    this.stateService.albumsRate$.subscribe(
-      (likes: number) => (this.likes = likes)
+    this.stateService.favoritesCount$.subscribe(
+      (liked: number) => (this.likes = liked)
     );
   }
 }

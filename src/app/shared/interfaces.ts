@@ -1,23 +1,6 @@
 export interface AlbumsRes {
   albums: Albums;
-}
-
-export interface Albums {
-  album: Album[];
-}
-
-export interface Album {
-  artist: Artist;
-  image: Image[];
-  mbid: string;
-  name: string;
-  url: string;
-}
-
-export interface Artist {
-  name: string;
-  mbid: string;
-  url: string;
+  ['@attr']: object;
 }
 
 export interface Image {
@@ -25,6 +8,22 @@ export interface Image {
   ['#text']: string;
 }
 
-export interface LSObject {
-  [key: string]: any;
+export interface Albums {
+  album: Album[];
+}
+
+export interface Artist {
+  name: string;
+}
+
+export interface Album {
+  name: string;
+  artist: Artist;
+  image: any;
+}
+
+export interface GotAlbum {
+  albumName: string;
+  artistName: string;
+  image: string;
 }

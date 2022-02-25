@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Album } from '../../../shared/interfaces';
+import { GotAlbum } from '../../../shared/interfaces';
 import { AlbumsService } from '../../../shared/services/albums.service';
 
 @Component({
@@ -8,25 +8,25 @@ import { AlbumsService } from '../../../shared/services/albums.service';
   styleUrls: ['./albums-list.component.css'],
 })
 export class AlbumsListComponent implements OnInit {
-  @Input() public albums!: Album[];
-  public foundAlbums!: Album[];
+  @Input() public albums!: GotAlbum[];
+  public foundAlbums!: GotAlbum[];
 
   constructor(private albumsService: AlbumsService) {}
 
   ngOnInit(): void {
-    this.filterSongs();
+    this.filterAlbums();
   }
 
-  private filterSongs(): void {
+  private filterAlbums(): void {
     this.albumsService.inputValue$.subscribe(
-      (searchValue) => (this.foundAlbums = this.findSongs(searchValue))
+      (searchValue: string) => (this.foundAlbums = this.findAlbums(searchValue))
     );
   }
 
-  private findSongs(searchValue: string): Album[] {
+  private findAlbums(searchValue: string): GotAlbum[] {
     if (this.albums.length) {
-      return this.albums.filter((album: Album) =>
-        album.name.includes(searchValue)
+      return this.albums.filter((album: GotAlbum) =>
+        album.albumName.includes(searchValue)
       );
     }
     return [];
